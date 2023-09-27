@@ -16,7 +16,7 @@ module Kaminari
   end
 
   class Config
-    attr_accessor :default_per_page, :max_per_page, :window, :outer_window, :left, :right, :page_method_name, :max_pages, :params_on_first_page
+    attr_accessor :default_per_page, :max_per_page, :window, :outer_window, :left, :right, :page_method_name, :max_pages, :params_on_first_page, :remove_params
     attr_writer :param_name
 
     def initialize
@@ -30,6 +30,7 @@ module Kaminari
       @param_name = :page
       @max_pages = nil
       @params_on_first_page = false
+      @remove_params = false
     end
 
     # If param_name was given as a callable object, call it when returning

@@ -57,7 +57,7 @@ module Kaminari
           @params
         else
           page_params = Rack::Utils.parse_nested_query("#{@param_name}=#{page}")
-          page_params = @params.deep_merge(page_params)
+          page_params = Kaminari.config.remove_params ? page_params : @params.deep_merge(page_params)
 
           if !Kaminari.config.params_on_first_page && (page <= 1)
             # This converts a hash:
