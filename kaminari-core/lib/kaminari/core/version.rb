@@ -2,6 +2,6 @@
 
 module Kaminari
   module Core
-    VERSION = '1.2.2_custom'
+    VERSION = '1.2.2.custom'
   end
 end
