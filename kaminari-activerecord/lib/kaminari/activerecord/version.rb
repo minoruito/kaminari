@@ -2,6 +2,6 @@
 
 module Kaminari
   module Activerecord
-    VERSION = '1.2.2_costom'
+    VERSION = '1.2.2.custom'
   end
 end
